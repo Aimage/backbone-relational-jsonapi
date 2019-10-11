@@ -74,7 +74,7 @@ Be careful: this function is called before the `parse` function has actually ret
 
 ## Links
 
-Links are treated like Meta with function called `handleLinks`. By default `links` are stored as an atribute for model or collection. `handeleLinks` can be customized in model or collection so links can be stored wherever in the model or collection model.
+Links are treated like Meta with function called `handleLinks`. By default `links` are stored as an atribute for model or collection. `handleLinks` can be customized in model or collection so links can be stored wherever in the model or collection model.
 
 
 ## Examples
