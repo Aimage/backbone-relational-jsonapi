@@ -72,6 +72,11 @@ This way, compound objecs containing `tags` objects will be parsed and the inclu
 Meta objects are supported and their treatment is delegated to the model or collection that is parsing the incoming data. When a `meta` object is found within the response, the function `handleMeta` is called on `this`. If the function is not defined, then the `meta` object is ignored.
 Be careful: this function is called before the `parse` function has actually returned, so you won't be able to access the parsed data from the `handeMeta` scope.
 
+## Links
+
+Links are treated like Meta with function called `handleLinks`. By default `links` are stored as an atribute for model or collection. `handeleLinks` can be customized in model or collection so links can be stored wherever in the model or collection model.
+
+
 ## Examples
 
 Here's an example of an `articles` object that can be parsed by the library
@@ -120,9 +125,3 @@ Which, Backbone-side would be expressed like
             relatedModel: Tag // Refers to the Tag class defined above
         }]
     });
-
-## Not supported
-
-Currently, the support of the JSONapi specification is partial. Work still needs to be done.
-
-* Links
